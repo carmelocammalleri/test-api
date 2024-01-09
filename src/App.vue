@@ -5,7 +5,6 @@ import { store } from './data/store';
  export default {
   name:'App',
   component:{
-    
   },
   data(){
     return{
@@ -22,16 +21,12 @@ import { store } from './data/store';
         })
     }
   }
-
  }
-
 </script>
 
 <template>
   <input type="text" v-model="citySearch" placeholder="city">
-
-  <input type="text" v-if="this.citySearch.length<3" disabled placeholder="road">
-  <input type="text" v-else v-model="roadSearch" placeholder="road">
+  <input type="text" :disabled="this.citySearch.length<3" placeholder="road">
   <button @click="getApi">invia</button>
 </template>
 
