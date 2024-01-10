@@ -1,10 +1,12 @@
 <script>
 import axios from 'axios';
 import { store } from './data/store';
+import Home from './components/Home.vue'
 
  export default {
   name:'App',
-  component:{
+  components:{
+    Home
   },
   data(){
     return{
@@ -34,25 +36,28 @@ import { store } from './data/store';
 </script>
 
 <template>
-  <div class="container">
-    <RouterView/>
-  </div>
-
   <!-- input city-->
   <input type="text" v-model="citySearch" placeholder="city">
   <input type="text" :disabled="this.citySearch.length<3" v-model="roadSearch" placeholder="road">
   <button @click="getApi">invia</button>
+
+
+  <Home/>
+  <div class="container">
+    <RouterView/>
+  </div>
+
   
   <!-- products -->
   <div v-for="product in store.products" class="card">
-  <img :src="product.img" class="card-img-top" :alt="product.name">
-  <div class="card-body">
-    <h5 class="card-title">{{ product.name }}</h5>
-    <p class="card-text">{{ product.description }}</p>
-    <p class="card-text">{{ product.price }}€</p>
-    <router-link :to="{name: 'Payment', params: {id: product.id}}" class="bottone">paga con graffa</router-link>
+    <img :src="product.img" class="card-img-top" :alt="product.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">{{ product.description }}</p>
+      <p class="card-text">{{ product.price }}€</p>
+      <router-link :to="{name: 'Payment', params: {id: product.id}}" class="bottone">paga con graffa</router-link>
+    </div>
   </div>
-</div>
 
 
 
