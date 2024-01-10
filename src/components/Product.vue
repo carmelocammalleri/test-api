@@ -35,7 +35,7 @@
        <h5 class="card-title">{{ product.name }}</h5>
        <p class="card-text">{{ product.description }}</p>
        <p class="card-text">{{ product.price }}€</p>
-       <router-link :to="{name: 'IdView', params: {id: product.id}}" class="btn btn-primary ">paga con graffa</router-link>
+       <router-link :to="{name: 'IdView', params: {id: product.id}}" class="btn btn-primary ">Aquista</router-link>
      </div>
    </div>
  </div>

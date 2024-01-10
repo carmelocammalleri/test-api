@@ -1,7 +1,19 @@
 <script>
+  import axios from 'axios';
+  import { store } from '../../data/store'
+
   export default {
     name: '_id',
+    components:{
+    },
+    data(){
+      return{
+        store
+      }
+    }
+    
   }
+
 </script>
 
 <template>

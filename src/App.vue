@@ -32,19 +32,10 @@
   <input type="text" :disabled="this.citySearch.length<3" v-model="roadSearch" placeholder="road">
   <button @click="getApi">invia</button>
 
-
   <Header/>
   <div class="container">
     <RouterView/>
   </div>
-
-
-
-
-  
-  
-
-
 
 </template>
 
