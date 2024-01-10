@@ -24,7 +24,7 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/viewId/:id',
+      path: '/view-id/:id',
       name: 'IdView',
       component: IdView
     }
