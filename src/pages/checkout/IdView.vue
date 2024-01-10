@@ -1,4 +1,4 @@
-<script >
+<script>
   export default {
     name: '_id',
   }
@@ -6,6 +6,7 @@
 
 <template>
  <h1>Acquista</h1>
+
 
  
 
